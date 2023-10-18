@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style>
+		
+		ul li{
+			list-style: none;
+			display: block;
+			margin-bottom: 20px;
+		}
+		a{
+			background: purple;
+			padding: 10px;
+			text-decoration: none;
+			color: white;
+		}
+		.main{
+			height: 60vh;
+			width: 50%;
+			margin: 0 auto;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+		}
+		section{
+			background: yellow;
+			border: 1px solid black;
+			width: 200px;
+			height: 200px;
+		}
+		h1{
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div class="main">
+		<section id="social-media-links" class="card">
+		<h1>Pastor Canayo</h1>
+		<ul>
+			<li><a href="https://www.youtube.com/@pastorcanayo4557/videos" class="tag">Youtube</a></li>
+			<li><a href="https://github.com/pastor-canayo" class="tag">Github</a></li>
+		</ul>
+	</section>
+	<section id="mrbeast-links" class="card">
+		<h1>MrBeast</h1>
+		<ul>
+			<li><a href="https://www.youtube.com/@MrBeast" class="tag">Youtube Mrbeast</a></li>
+			<li><a href="https://twitter.com/MrBeast?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class="tag">MrBeast Twitter</a></li>
+		</ul>
+	</section>
+	</div>
+	<script>
+		let links = document.querySelectorAll(".tag");
+		links.forEach(function(link){
+			link.removeAttribute("target", "_blank");
+		});
+	</script>
+</body>
+</html>
