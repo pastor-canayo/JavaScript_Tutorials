@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style>
+		.main{
+			padding: 200px;
+		}
+	</style>
+</head>
+<body>
+	<div class="main">
+	     First Number: <br>
+	    <input type="text" id="firstNo" name="first">
+	    <br><br>Second Number: <br>
+	    <br>
+	    <input type="text" id="secondNo" name="second">
+	    <br><br>Third Number: <br>
+	    <input type="text" id="thirdNo" name="third">
+	    <br><br>Product of the three Numbers: <br>
+	    <input type="text" id="result" name="res">
+	    <br><br>
+	    <input type="button" id="calculateBtn" name="multiplication" value="calculate">
+	</div>
+	<script>
+		// function multiply_number(){
+		// 	let a = document.getElementById("firstNo").value;
+		// 	let b = document.getElementById("secondNo").value;
+		// 	let c = document.getElementById("thirdNo").value;
+		// 	let product = a * b * c;
+		// 	document.getElementById("result").value = product;
+		// }
+
+		function calculate2(){
+			let a = document.getElementById("firstNo").value;
+		 	let b = document.getElementById("secondNo").value;
+		 	let c = document.getElementById("thirdNo").value;
+		 	let result = document.getElementById("result").value = a * b * c;
+		}
+		let calculate = document.getElementById("calculateBtn");
+		calculate.addEventListener("click", calculate2);
+	</script>
+</body>
+</html>

@@ -34,6 +34,9 @@
 		h1{
 			text-align: center;
 		}
+		.card{
+			background: dark;
+		}
 	</style>
 </head>
 <body>
@@ -54,10 +57,12 @@
 	</section>
 	</div>
 	<script>
-		let links = document.querySelectorAll(".tag");
-		links.forEach(function(link){
-			link.removeAttribute("target", "_blank");
-		});
+		// let links = document.querySelectorAll(".tag");
+		// links.forEach(function(link){
+		// 	link.removeAttribute("target", "_blank");
+		// });
+		let card = document.querySelector(".card");
+		card.classList.add("dark");
 	</script>
 </body>
 </html>
