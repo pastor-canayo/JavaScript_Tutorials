@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Adding a Class Name</title>
+	<style>
+		body{
+			background: purple;
+			color: white;
+		}
+		h1{
+			font-size: 50px;
+		}
+		p{
+			font-size: 30px;
+		}
+		.container{
+			height: 50vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+		button{
+			padding: 20px;
+			background: orange;
+			border-radius: 10px;
+			font-size: 30px;
+		}
+		.green{
+			background: pink;
+			padding: 20px;
+			border: 4px solid black;
+			animation-name: fontGrow;
+			animation-duration: 2s;
+			animation-iteration-count: infinite;
+			transform-origin: top;
+			transition-timing-function: ease-in-out;
+		}
+		@keyframes fontGrow{
+			0%{
+				transform: scaleY(1);
+				color: red;
+			}
+			50%{
+				transform: scaleY(2);
+				color: green;
+			}
+			100%{
+				transform: scaleY(1);
+				color: orange;
+			}
+
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Adding a class Name with JavaScript</h1>
+		<p class="para">Here we are adding this class as long as you click on the button, it should
+		give us a background color</p>
+		<button id="btn">Click</button>
+	</div>
+	<script>
+		function addClass(){
+			let element = document.querySelector(".para");
+			element.classList.toggle("green");
+		}
+		document.getElementById("btn").addEventListener("click", addClass);
+	</script>
+</body>
+</html>
