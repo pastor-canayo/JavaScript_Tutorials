@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style>
+		body{
+			background: purple;
+		}
+		.container{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+		.btn{
+			background: #e40078;
+			color: white;
+			font-size: 20px;
+		}
+		input{
+			padding: 10px;
+			border: 3px solid #2b98f0;
+		}
+		#randomName{
+			background: yellow;
+			font-weight: bold;
+			color: #000;
+		}
+		p{
+			color: white;
+			font-size: 25px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<input type="text" id="nameInput" class="nameInput" maxlength="12" minlength="4" placeholder="names" required>
+		<input type="button" id="btn" class="btn"  value="Generate Names">
+		<br><br>
+		<p>Your random name for you is: <span id="randomName"></span></p>
+	</div>
+	<script>
+		let nameList = ["Arabella", "Jace", "Riley", "Lukas", "Ayla",
+			"Clark", "Valeria", "Kellen", "Jayson", "Kadence", "Asher", "Emberly","Paxton","Alayah","Gatlin","Frances","Brooklynn","Darius","Bexley","Archie","Noah","Alijah","Milana","Hugh","Mira","Kaisley","Eliseo","Ryann","Zuri","Calvin","Savanna","Grant","Ayan","Uriel","Atticus","Bennett","Conor","Leyla","Hattie"];
+		let btn = document.getElementById('btn');
+		let output = document.getElementById('nameInput');
+		let outputSpan = document.getElementById('randomName');
+		btn.addEventListener("click", generate);
+
+		function generate(){
+			let result = nameList[Math.floor(Math.random() * nameList.length)];
+			output.value = result;
+			outputSpan.innerHTML = result;
+		}
+	</script>
+</body>
+</html>
