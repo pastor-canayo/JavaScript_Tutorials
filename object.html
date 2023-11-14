@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script>
+		const person = {
+			firstName: "Pastor",
+			lastName: "Smith",
+			age: 2023 - 1985,
+			job: "Teacher",
+			friend: ["Pedro", "Peter", "Steven"]
+		}
+		const userQuestion = prompt("What do you want to know about Pastor? choose between firstName, LastName, age, job and friends");
+		if(person[userQuestion]){
+			alert(person[userQuestion]);
+		}
+		else{
+			alert("wrong answer");
+		}
+	</script>
+</body>
+</html>
