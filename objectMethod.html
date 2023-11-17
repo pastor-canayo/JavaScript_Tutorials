@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style>
+		#show{
+			background: blue;
+			border: 2px solid green;
+			padding: 20px;
+			align-items: center;
+			color: white;
+			width: 20%;
+			margin: auto;
+		}
+	</style>
+</head>
+<body>
+	<div id="show"></div>
+	<script>
+		const userOne = {
+			name: 'Pastor Canayo',
+			username: 'ryu',
+			password: 'spiderman',
+			email: 'ryu@gmail.com',
+			friends: ['Michael', 'Peter', 'Steven', 'Pastor', 'Jonathan'],
+			displayInfo: function(){
+				alert(`${userOne.name.split(" ")[1]}`);
+			},
+			login(){
+				let userInfo = prompt("Enter your username to log in: ");
+				let userPass = prompt("Enter your password: ");
+				if(userInfo === userOne.username && userPass === userOne.password){
+					alert("The user logged in");
+					document.getElementById("show").innerHTML = userOne.friends;
+				}
+				else{
+					alert("wrong password");
+					document.getElementById("show").innerHTML = "Sorry I can not show you anything";
+				}
+			}
+		};
+		alert(userOne.login());
+	</script>
+</body>
+</html>
