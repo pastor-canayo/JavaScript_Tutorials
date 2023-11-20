@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Class Constructor</title>
+</head>
+<body>
+	<script>
+		class User{
+			constructor(firstname, lastname){
+				this.firstName = firstname;
+				this.lastName = lastname;
+			}
+		}
+		const userOne = new User('Pastor', 'Canayo');
+		const userTwo = new User('John', 'Smith');
+		console.log(userOne, userTwo);
+	</script>
+</body>
+</html>
