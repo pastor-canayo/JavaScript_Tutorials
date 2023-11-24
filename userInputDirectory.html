@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Employee Directory Application</title>
+</head>
+<body>
+	<script>
+		let employee = {};
+		let firstName = prompt("First Name: ");
+		if (!firstName){
+			console.log("Invalid first name");
+		}
+		employee.firstName = firstName;
+
+		let lastName = prompt("Last Name: ");
+		if(!lastName){
+			console.log("Invalid Last Name");
+		}
+		employee.lastName = lastName;
+
+		let startDateYear = prompt("Employee Start Year (1990 - 2023)");
+		startDateYear = Number(startDateYear);
+		if(!Number.isInteger(startDateYear)){
+			console.log("Enter a valid start date year");
+		}
+		//check if number isn in range
+		if(startDateYear < 1990 || startDateYear > 2023){
+			console.log("Enter a start date year within the correct range");
+		}
+		let startDateMonth = prompt("Employee Start Date Month (1-12)");
+		startDateMonth = Number(startDateMonth);
+		if(!Number.isInteger(startDateMonth)){
+			console.log("Enter a valid start date month");
+		}
+		if(startDateMonth < 1 || startDateMonth > 12){
+			console.log("Enter a start date month within the correct range");
+		}
+
+		let startDateDay = prompt("Employee start Date Day (1 - 31): ");
+		startDateDay = Number(startDateDay);
+		if(!Number.isInteger(startDateDay)){
+			console.log("Enter a valid start date day");
+		}
+		if(startDateDay < 1 || startDateDay > 31){
+			console.log("Enter a start date day within the correct range");
+		}
+		employee.startDate = new Date(startDateYear, startDateMonth - 1, startDateDay);
+		let isActive = prompt("Is employee active (yes or no): ");
+		if(isActive !== "yes" && isActive !== "no"){
+			console.log("Enter yes or no for employee active status");
+		}
+		employee.isActive = (isActive === "yes");
+
+		//output employee JSON
+		const json = JSON.stringify(employee, null, 2);
+		console.log(`employee: ${json}`);
+	</script>
+</body>
+</html>
