@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Asyncronous vs Syncronous</title>
+</head>
+<body>
+	<script>
+		console.log("I am first");
+		setTimeout(() => {
+			console.log("I am second");
+		}, 3000)
+		
+		console.log("I am third");
+		console.log("I am fourth");
+		
+	</script>
+</body>
+</html>
