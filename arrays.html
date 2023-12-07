@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Arrays</title>
+	<style>
+		h1{
+			text-align: center;
+			font-size: 30px;
+			text-decoration: underline;
+		}
+		p{
+			text-align: center;
+			font-size: 25px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Arrays</h1>
+	<p>Array in javascript is an ordered collection of items.  It has a length property and methods for manipulating the list.  Arrays should be used for  collections where the order matters.</p>
+	<script>
+		//empty array
+		let arr1 = [];
+		//add items to the array - length of 2
+		let arr2 = ["item1", "item2"];
+		// creating array using the constructor
+		let arr3 = new Array();
+		// passing values to the constructor
+		let arr4 = new Array("item1", "item2");
+
+		//Accessing the values in the array
+		let names = ["Pastor", "Alexandria", "Peter", "Pedro"];
+		//checking the lenght of the array
+		console.log(`Names Length: ${names.length}`);
+		console.log(`First Name: ${names[0]}`);
+		console.log(`First Name: ${names[1]}`);
+		console.log(`Nine Name: ${names[9]}`);
+
+		//search values where is a position or if it is included in the array
+		const includePastor = names.includes("Pastor");
+		console.log(`Includes Pastor: ${includePastor}`);
+		const includeJohn = names.includes("John");
+		console.log(`Includes John: ${includeJohn}`);
+
+		//using the idexOf to check where are they in the list
+		const pastorIndex = names.indexOf("Pastor");
+		console.log(`Pastor Index: ${pastorIndex}`);
+		// checking the index in the list when the item does not exist
+		const loganIndex = names.indexOf("Logan");
+		console.log(`Logan Index: ${loganIndex}`);
+
+		// adding values to the array - at the end
+		names.push("Jennifer");
+		console.log(names);
+
+		// adding at the beginning
+		names.unshift("Sarah");
+		console.log(names);
+
+		//adding a value - at specific index
+		names.splice(1,0, "Mike");
+		console.log(names);
+
+		//removing value - at the beginning
+		names.shift();
+		console.log(names);
+
+		//removing value - at the specific index
+		names.splice(5, 1);
+		console.log(names);
+
+		//Arrays and objects
+
+		const obj1 = {
+			firstName: "Pastor",
+			lastName: "Canayo"
+		}
+		const obj2 = {
+			firstName: "Mike",
+			lastName: "Smith"
+		}
+		const obj3 = {
+			firstName: "Pastor",
+			lastName: "Canayo"
+		}
+		const employees = [obj1, obj2];
+		console.log(`Is Identical object in array: ${employees.includes(obj1)}`);
+		console.log(`Is Identical object in array: ${employees.includes(obj3)}`);
+
+	</script>
+</body>
+</html>
