@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Map</title>
+	<style>
+		h1, p{
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<h1>Map</h1>
+	<p>The Map object holds key-value pairs and remembers the original insertion order of the keys. Any value (both objects and primitive values) may be used as either a key or a value.</p>
+	<script>
+		// creating an object
+		const obj = {
+			firstName: "David",
+			lastName: "Francis"
+		}
+		const map1 = new Map();
+		map1.set("firstName", "David");
+		map1.set("lastName", "Francis");
+		console.log(map1);
+
+		//using non-string keys
+		map1.set(new Date().getTime(), "Number key");
+		map1.set([], "Array Key");
+		map1.set(() => "Hello", "Function Key");
+		console.log(map1);
+
+		//checking the size
+		console.log(`Map Size: ${map1.size}`);
+
+		//Accessing values
+		console.log(map1.get("lastName"));
+		console.log([]);
+
+		//deleting a value
+		map1.delete("firstName");
+		console.log(`Map Size: ${map1.size}`);
+	</script>
+</body>
+</html>
